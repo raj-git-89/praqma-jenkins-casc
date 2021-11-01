@@ -3,13 +3,12 @@ version: '3.3'
 services:
   jenkins: 
     build: 
-      context: ./master
+      context: .
     ports: 
-      - 80:8080
-      - 50000:50000
+      - 8001:8080
     volumes:
       - jenkins_home_summit:/var/jenkins_home
-      - ./casc_configs:/var/jenkins_conf
+    #  - ./casc_configs:/var/jenkins_conf
     # secrets:
     #   - github  #Github username with password as an example. Purpose here is to have a user with write-access for special cases. Like the git-publisher.
     #   - adminpw  #Initial adminstrator user password. Added for debugging purposes. Should be removed prior to go-live. 
