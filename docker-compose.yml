@@ -7,8 +7,8 @@ services:
     ports: 
       - 8001:8080
     volumes:
-      - jenkins_home_summit:/var/jenkins_home
+      - jenkins_vol:/var/jenkins_home
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
 volumes:
-  jenkins_home_summit:
+  jenkins_vol:
